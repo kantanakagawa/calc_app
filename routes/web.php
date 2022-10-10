@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/controller/word/{msg}', [App\Http\Controllers\MessageController::class, 'word']);
+Route::get('/calcs/{num1}/{calcu}/{num2}', [App\Http\Controllers\MessageController::class, 'result']);
