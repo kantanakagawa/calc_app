@@ -15,16 +15,20 @@ class MessageController extends Controller
     {
         switch ($calcu) {
             case 'addition':
-                return view('message.addition', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2]);
+            $ans = $num1 + $num2;
+                return view('message.result', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2, 'ans'=> $ans]);
                 break;
             case 'subtraction':
-                return view('message.subtraction', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2]);
+            $ans = $num1 - $num2;
+                return view('message.result', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2, 'ans'=> $ans]);
                 break;
             case 'multiplication':
-                return view('message.multiplication', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2]);
+            $ans = $num1 * $num2;
+                return view('message.result', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2, 'ans'=> $ans]);
                 break;
             case 'division':
-                return view('message.division', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2]);
+            $ans = $num1 / $num2;
+                return view('message.result', ['calcu' => $calcu, 'num1' => $num1, 'num2' => $num2, 'ans'=> $ans]);
                 break;
         }
     }
